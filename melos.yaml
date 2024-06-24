@@ -1,0 +1,22 @@
+name: skyway_flutter_sdk
+
+packages:
+  - flutter_skyway
+  - flutter_skyway_android
+  - flutter_skyway_ios
+  - flutter_skyway_platform_interface
+
+command:
+  bootstrap:
+    usePubspecOverrides: true
+
+scripts:
+  postbootstrap: flutter pub get
+
+  postclean: >
+    melos exec -c 6 -- \
+      "flutter clean"
+
+ide:
+  intellij:
+    enabled: false

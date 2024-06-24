@@ -1,0 +1,30 @@
+name: flutter_skyway_ios
+description: iOS implementation of the flutter_skyway plugin
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+flutter:
+  plugin:
+    implements: flutter_skyway
+    platforms:
+      ios:
+        pluginClass: FlutterSkywayPlugin
+        dartPluginClass: FlutterSkywayIOS
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_skyway_platform_interface:
+    git:
+      url: git@github.com:thekyros-com/skyway-flutter-sdk.git
+      ref: develop
+      path: flutter_skyway_platform_interface
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.0
+  very_good_analysis: ^5.1.0

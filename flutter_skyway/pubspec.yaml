@@ -1,0 +1,41 @@
+name: flutter_skyway
+description: My new Flutter plugin
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        default_package: flutter_skyway_android
+      ios:
+        default_package: flutter_skyway_ios
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_skyway_android:
+    git:
+      url: git@github.com:thekyros-com/skyway-flutter-sdk.git
+      ref: develop
+      path: flutter_skyway_android
+  flutter_skyway_ios:
+    git:
+      url: git@github.com:thekyros-com/skyway-flutter-sdk.git
+      ref: develop
+      path: flutter_skyway_ios
+  flutter_skyway_platform_interface:
+    git:
+      url: git@github.com:thekyros-com/skyway-flutter-sdk.git
+      ref: develop
+      path: flutter_skyway_platform_interface
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.0
+  plugin_platform_interface: ^2.1.6
+  very_good_analysis: ^5.1.0
